@@ -1,4 +1,4 @@
-const games = requiree('../data/games.js');
+var games = require("../data/games");
 
 module.exports = function (app) {
 
@@ -15,7 +15,7 @@ module.exports = function (app) {
     }
 
     let data = req.body;
-    let scores = data.scores;
+    let userScores = data.scores;
 
     for (let i = 0; i < games.length; i++) {
       let currentGame = games[i];
@@ -23,7 +23,7 @@ module.exports = function (app) {
 
       for (let j = 0; i < currentGame.scores.length; j++) {
         let currentGameScore = currentGame.scores[j];
-        let currentUserScore = scores[j];
+        let currentUserScore = userScores[j];
 
         finalDifference += Math.abs(parseInt(currentUserScore) - parseInt(currentGameScore));
       };
