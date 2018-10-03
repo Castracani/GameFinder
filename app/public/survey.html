@@ -181,26 +181,26 @@
   </div>
 
   <script type="text/javascript">
-    // // Chosen CSS
-    // const config = {
-    //   ".chosen-select": {},
-    //   ".chosen-select-deselect": {
-    //     allow_single_deselect: true
-    //   },
-    //   ".chosen-select-no-single": {
-    //     disable_search_threshold: 10
-    //   },
-    //   ".chosen-select-no-results": {
-    //     no_results_text: "Nothing found, why could that be?"
-    //   },
-    //   ".chosen-select-width": {
-    //     width: "95%"
-    //   }
-    // };
+    // Chosen CSS
+    const config = {
+      ".chosen-select": {},
+      ".chosen-select-deselect": {
+        allow_single_deselect: true
+      },
+      ".chosen-select-no-single": {
+        disable_search_threshold: 10
+      },
+      ".chosen-select-no-results": {
+        no_results_text: "Nothing found, why could that be?"
+      },
+      ".chosen-select-width": {
+        width: "95%"
+      }
+    };
 
-    // for (let selector in config) {
-    //   $(selector).chosen(config[selector]);
-    // }
+    for (let selector in config) {
+      $(selector).chosen(config[selector]);
+    }
 
     // Capture the form inputs
     $("#submit").on("click", function(e) {

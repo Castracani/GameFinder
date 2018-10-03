@@ -14,12 +14,14 @@ module.exports = function (app) {
       difference: Infinity
     }
 
-    let data = req.body;
-    let userScores = data.scores;
+    let userData = req.body;
+    let userScores = userData.scores;
 
     for (let i = 0; i < games.length; i++) {
       let currentGame = games[i];
       let finalDifference = 0;
+
+      console.log(currentGame.game);
 
       for (let j = 0; i < currentGame.scores.length; j++) {
         let currentGameScore = currentGame.scores[j];
@@ -34,7 +36,7 @@ module.exports = function (app) {
         compatible.difference = finalDifference;
       };
     };
-    games.push(data);
+    games.push(userData);
     res.json(compatible);
   });
 };
